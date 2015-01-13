@@ -4,7 +4,8 @@ cfi:
 	@unzip cfi.html.zip
 
 epub:
-	@pandoc -o cfi.md -f html -t markdown cfi.html
+	@cat cfi.html | sed -e 's/--/-/g' > cfi_ndd.html
+	@pandoc -o cfi.md -f html -t markdown cfi_ndd.html
 	@# [^1^](#1) -> [^1]
 	@# ^1^ -> [^1]:
 	@cat cfi.md | sed -e 's/\[\^\([0-9]*\)\^\](\#\([0-9]*\))/\[\^\1\]/g' | sed -e 's/\^\([0-9]*\)\^/\[\^\1\]: /g' > cfi_footnotes.md
@@ -14,4 +15,4 @@ mobi:
 	@ebook-convert cfi.epub cfi.mobi
 
 clean:
-	@rm -f *.gif cfi.html.zip cfi.html cfi.md cfi_footnotes.md cfi.epub cfi.mobi
+	@rm -f *.gif cfi.html.zip cfi.html cfi_ndd.html cfi.md cfi_footnotes.md cfi.epub cfi.mobi
