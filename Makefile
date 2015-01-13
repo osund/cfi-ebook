@@ -16,4 +16,4 @@ mobi:
 	@ebook-convert cfi.epub cfi.mobi
 
 clean:
-	@rm -f *.gif cfi.html.zip cfi.html cfi.md cfi.epub cfi.mobi
+	@rm -f *.gif cfi.html.zip cfi.html cfi.md cfi_footnotes.md cfi.epub cfi.mobi
