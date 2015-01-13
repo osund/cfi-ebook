@@ -1,0 +1,3 @@
+% Copyright finns inte V3.0
+% Linus Walleij
+

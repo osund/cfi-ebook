@@ -1,0 +1,13 @@
+---
+title:
+- type: main
+  text: Copyright finns inte
+- type: subtitle
+  text: V3.0
+author: Linus Walleij
+language: sv-SE
+identifier:
+- scheme: ISBN-10
+  text: 91-630-9465-7
+publisher: RootGear
+...
